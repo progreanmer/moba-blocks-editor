@@ -1,0 +1,22 @@
+{
+  "name": "moba-blocks-editor",
+  "version": "0.1.0",
+  "description": "block editor for maba game base on Apaimanee API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progreanmer/moba-blocks-editor.git"
+  },
+  "author": "Chalermchon Saekoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/progreanmer/moba-blocks-editor/issues"
+  },
+  "homepage": "https://github.com/progreanmer/moba-blocks-editor#readme",
+  "dependencies": {
+    "blockly": "google/blockly#9d68af8864dc8e4f9a98b6ab001080096793222e"
+  }
+}
