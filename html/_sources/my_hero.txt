@@ -1,0 +1,7 @@
+my_hero module
+==============
+
+.. automodule:: my_hero
+    :members:
+    :undoc-members:
+    :show-inheritance:

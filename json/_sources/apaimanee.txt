@@ -1,0 +1,7 @@
+apaimanee module
+================
+
+.. automodule:: apaimanee
+    :members:
+    :undoc-members:
+    :show-inheritance:

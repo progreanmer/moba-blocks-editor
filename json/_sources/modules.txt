@@ -1,0 +1,9 @@
+api_game
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   apaimanee
+   controller
+   my_hero

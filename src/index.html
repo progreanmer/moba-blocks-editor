@@ -2,12 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Blockly Demo: Generating JavaScript</title>
+  <title>Moba Block Editor</title>
   <script src="libs/blockly/blockly_compressed.js"></script>
   <script src="libs/blockly/blocks_compressed.js"></script>
   <script src="libs/blockly/javascript_compressed.js"></script>
   <script src="libs/blockly/msg/js/en.js"></script>
   <script src="libs/blockly/python_compressed.js"></script>
+  <script src="test_lib.js"></script>
+  <script src ="genpy_test.js"></script>
+  <script src="tran.js"></script>
+  <script src="gen_block.js"></script>
+
+
   <style>
     body {
       background-color: #fff;
@@ -20,16 +26,20 @@
   </style>
 </head>
 <body>
-  <h1><a href="https://developers.google.com/blockly/">Blockly</a> &gt;
-    <a href="../index.html">Demos</a> &gt; Generating JavaScript</h1>
-
+  <p>
+    <center>Moba Block Editor</center>
+  </p>
   <p>
     <button onclick="showCode()">Show Python</button>
     <button onclick="exportCode()">Export Python</button>
   </p>
     File name: <input id ="fname" type = "text" name = "fname" >
 
-  <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+  <div id="blocklyDiv" style="height: 800px; width: 800px;">
+    <xml id='startBlocks' style="display: none">
+      <block type="block3"></block>
+    </xml>
+  </div>
 
   <xml id="toolbox" style="display: none">
     <category name="Logic">
@@ -53,98 +63,24 @@
       <block type="math_number"></block>
       <block type="math_arithmetic"></block>
       <block type="math_single"></block>
+      <block type="math_change"></block>
     </category>
     <category name="Text">
       <block type="text"></block>
       <block type="text_length"></block>
       <block type="text_print"></block>
     </category>
-  </xml>
-
-  <xml id="startBlocks" style="display: none">
-    <block type="controls_if" inline="false" x="20" y="20">
-      <mutation else="1"></mutation>
-      <value name="IF0">
-        <block type="logic_compare" inline="true">
-          <field name="OP">EQ</field>
-          <value name="A">
-            <block type="math_arithmetic" inline="true">
-              <field name="OP">MULTIPLY</field>
-              <value name="A">
-                <block type="math_number">
-                  <field name="NUM">6</field>
-                </block>
-              </value>
-              <value name="B">
-                <block type="math_number">
-                  <field name="NUM">7</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <value name="B">
-            <block type="math_number">
-              <field name="NUM">42</field>
-            </block>
-          </value>
-        </block>
-      </value>
-      <statement name="DO0">
-        <block type="text_print" inline="false">
-          <value name="TEXT">
-            <block type="text">
-              <field name="TEXT">Don't panic</field>
-            </block>
-          </value>
-        </block>
-      </statement>
-      <statement name="ELSE">
-        <block type="text_print" inline="false">
-          <value name="TEXT">
-            <block type="text">
-              <field name="TEXT">Panic</field>
-            </block>
-          </value>
-        </block>
-      </statement>
-    </block>
+    <category name="Test">
+      <block type="block3"></block>
+    </category>
   </xml>
 
   <script>
     var workspace = Blockly.inject('blocklyDiv',
         {media: 'libs/blockly/media/',
          toolbox: document.getElementById('toolbox')});
-    Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
-                               workspace);
 
-    function showCode() {
-      // Generate JavaScript code and display it.
-      Blockly.Python.INFINITE_LOOP_TRAP = null;
-      var code = Blockly.Python.workspaceToCode(workspace);
-      alert(code);
-    }
-
-    function exportCode() {
-      Blockly.Python.INFINITE_LOOP_TRAP = null;
-      var code = Blockly.Python.workspaceToCode(workspace);
-
-      var gen_file = document.createElement('a');
-      var file_name = document.getElementById('fname').value
-
-
-       gen_file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(code));
-       gen_file.setAttribute('download',file_name);
-
-      if (document.createEvent) {
-          var event = document.createEvent('MouseEvents');
-          event.initEvent('click', true, true);
-          gen_file.dispatchEvent(event);
-      }
-      else {
-          gen_file.click();
-      }
-    }
   </script>
-
+  <script src="main.js"></script>
 </body>
 </html>
