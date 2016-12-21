@@ -32,14 +32,12 @@
   <p>
     <button onclick="showCode()">Show Python</button>
     <button onclick="exportCode()">Export Python</button>
+    <button onclick="saveBlock()">Save Block</button>
+    <input type="file" id="file-input" />
   </p>
     File name: <input id ="fname" type = "text" name = "fname" >
 
-  <div id="blocklyDiv" style="height: 800px; width: 800px;">
-    <xml id='startBlocks' style="display: none">
-      <block type="block3"></block>
-    </xml>
-  </div>
+  <div id="blocklyDiv" style="height: 800px; width: 800px;"></div>
 
   <xml id="toolbox" style="display: none">
     <category name="Logic">
