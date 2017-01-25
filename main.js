@@ -10,8 +10,9 @@ let mainWindow
 
 
 app.on('ready', function(){
-  var subpy = require('child_process').spawn('node', ['server.js']);
-//  var subpy2 = require('child_process').spawn('read_file.py');
+  var subpy = require('child_process').spawn('node', ['server.js'])
+  var subpy2 = require('child_process').spawn('python', ['src/read_file.py'])
+  var subpy3 = require('child_process').spawn('python', ['src/tran.py']);
 
   var rq = require('request-promise');
   var mainAddr = 'http://localhost:8181';
@@ -32,6 +33,8 @@ app.on('ready', function(){
       mainWindow = null;
       // kill python
       subpy.kill('SIGINT');
+      subpy2.kill('SIGINT');
+      subpy3.kill('SIGINT');
     });
   };
 

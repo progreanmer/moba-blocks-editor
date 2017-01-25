@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Moba Block Editor</title>
+
   <script src="libs/blockly/blockly_compressed.js"></script>
   <script src="libs/blockly/blocks_compressed.js"></script>
   <script src="libs/blockly/javascript_compressed.js"></script>
   <script src="libs/blockly/msg/js/en.js"></script>
   <script src="libs/blockly/python_compressed.js"></script>
-  <script src="test_lib.js"></script>
-  <script src ="genpy_test.js"></script>
+  <script src="hero_controller.js"></script>
+  <!-- <script src ="genpy_test.js"></script> -->
   <script src="tran.js"></script>
-  <script src="gen_block.js"></script>
+  <!-- <script src="gen_block.js"></script> -->
+  <script src="hero_controller.js"></script>
 
-
+  <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
   <style>
     body {
       background-color: #fff;
@@ -24,22 +26,37 @@
       font-size: 140%;
     }
   </style>
+
+  <script>if (window.module) module = window.module;</script>
+
 </head>
 <body>
   <p>
     <center>Moba Block Editor</center>
   </p>
   <p>
-    <button onclick="showCode()">Show Python</button>
-    <button onclick="exportCode()">Export Python</button>
-    <button onclick="saveBlock()">Save Block</button>
-    <input type="file" id="file-input" />
+    <label class="button">
+      <button onclick="showCode()"></button>
+      Show Python
+    </label>
+    <label class="button">
+      <button onclick="exportCode()"></button>
+      Export Python
+    </label>
+    <label class="button">
+      <button onclick="saveBlock()"></button>
+      Save Block
+    </label>
+    <label class="button">
+      <input type="file" id = "file-input">
+      Open Block
+    </label>
   </p>
     File name: <input id ="fname" type = "text" name = "fname" >
 
   <div id="blocklyDiv" style="height: 800px; width: 800px;"></div>
 
-  <xml id="toolbox" style="display: none">
+  <xml id="toolbox" style = "display : none">
     <category name="Logic">
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
@@ -79,6 +96,14 @@
          toolbox: document.getElementById('toolbox')});
 
   </script>
+
   <script src="main.js"></script>
+  <script>
+  // var xml = x;
+  // xmlDoc = $.parseXML( xml ),
+  // $xml = $( xmlDoc ),
+  //   $("#toolbox").append(xml);
+  </script>
+
 </body>
 </html>

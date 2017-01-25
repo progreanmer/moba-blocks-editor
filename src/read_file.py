@@ -10,12 +10,14 @@ for met in soup.find_all("dl", attrs={"class": "method"}):
     num_arg = 0
     arg={}
     j = 0
+    code_temp = {}
     for arg_name in met.find_all('em'):
         arg[j] = arg_name.get_text()
     arg[j+1] = 'message'
     for func in met.find_all('code'):
-        f2.write('var block' + str(i) + '={' +
-        '\n     "message0":' + '"' + func.get_text() + ' ')
+        code_temp[i] = func.get_text()
+        f2.write('var '+  code_temp[i] + '={' +
+        '\n     "message0":' + '"' + code_temp[i] + ' ')
         num_arg = 0
         for a in met.find_all('em'):
             f2.write(a.get_text() + ' ' + '='+ ' ' + '%')
@@ -30,7 +32,7 @@ for met in soup.find_all("dl", attrs={"class": "method"}):
     f2.write('"previousStatement": null,\n')
     f2.write('"nextStatement": null,\n')
     f2.write('"colour": 430\n};\n')
-    f2.write('Blockly.Blocks["block' + str(i) + '"] = {\n')
+    f2.write('Blockly.Blocks["block' + code_temp[i] + '"] = {\n')
     f2.write('  init: function() {\n')
     f2.write('this.jsonInit(block'+ str(i) +');\n')
     f2.write('var thisBlock = this;\n')

@@ -1,0 +1,55 @@
+<category name="Updatecategory">
+    <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+    </category>
+    <category name="Loops">
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <block type="math_number">
+                    <field name="NUM">10</field>
+                </block>
+            </value>
+        </block>
+        <block type="controls_whileUntil"></block>
+    </category>
+    <category name="Math">
+        <block type="math_number"></block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+        <block type="math_change"></block>
+    </category>
+    <category name="Text">
+        <block type="text"></block>
+        <block type="text_length"></block>
+        <block type="text_print"></block>
+    </category>
+    <category name="Hero Controller">
+        <block type="attack"></block>
+        <block type="is_allies"></block>
+        <block type="is_enemy"></block>
+        <block type="move"></block>
+        <block type="update_message"></block>
+        <block type="update_status"></block>
+        <block type="use_skill"></block>
+        <block type="get_enemy_hp"></block>
+        <block type="get_hp"></block>
+        <block type="get_item_in_hero"></block>
+        <block type="get_mp"></block>
+        <block type="buy_item"></block>
+        <block type="can_buy_item"></block>
+        <block type="can_sell_item"></block>
+        <block type="can_use"></block>
+        <block type="get_damage"></block>
+        <block type="get_delay"></block>
+        <block type="get_own_item"></block>
+        <block type="get_prize_when_buy"></block>
+        <block type="get_prize_when_sell"></block>
+        <block type="get_stack_in_hero"></block>
+        <block type="get_use_mana"></block>
+        <block type="sell_item"></block>
+    </category>
+</category>

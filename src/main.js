@@ -1,27 +1,42 @@
-
-
+//show py code from block
 function showCode() {
+
+  var raw_code = Blockly.Python.workspaceToCode(workspace);
+  var split = raw_code.split("\n");
+  var tab2 = "        ";
+  console.log(split);
 
   var code = 'from sim_monitor.sim_client.api_game.hero_controller import HeroController\n'
   +'from sim_monitor.sim_client.api_game.my_hero import MyHero\n'
   +'import time\n\n\n'
   + 'class x(MyHero):\n' + '    def __init__(self):\n' + '        super().__init__()\n'
   + '        self.controller = HeroController()\n'
-  + '        time.sleep(5)\n\n' +'    def run(self):\n'
-  + '        ' + Blockly.Python.workspaceToCode(workspace);
-
+  + '        time.sleep(5)\n\n' +'    def run(self):\n';
+  for (n in split){
+    console.log(split[n])
+    code = code + tab2 + split[n] + "\n";
+  }
   alert(code);
 }
 
+//export block to py code
 function exportCode() {
+
+  var raw_code = Blockly.Python.workspaceToCode(workspace);
+  var split = raw_code.split("\n");
+  var tab2 = "        ";
+  console.log(split);
 
   var code = 'from sim_monitor.sim_client.api_game.hero_controller import HeroController\n'
   +'from sim_monitor.sim_client.api_game.my_hero import MyHero\n'
   +'import time\n\n\n'
   + 'class x(MyHero):\n' + '    def __init__(self):\n' + '        super().__init__()\n'
   + '        self.controller = HeroController()\n'
-  + '        time.sleep(5)\n\n' +'    def run(self):\n'
-  + '        ' + Blockly.Python.workspaceToCode(workspace);
+  + '        time.sleep(5)\n\n' +'    def run(self):\n';
+  for (n in split){
+    console.log(split[n])
+    code = code + tab2 + split[n] + "\n";
+  }
 
   Blockly.Python.INFINITE_LOOP_TRAP = null;
 
@@ -42,6 +57,7 @@ function exportCode() {
   }
 }
 
+//save block to xml
 function saveBlock() {
   var xml = Blockly.Xml.workspaceToDom(workspace);
   var xml_text = Blockly.Xml.domToPrettyText(xml)
@@ -82,5 +98,16 @@ function readSingleFile(e) {
   };
   reader.readAsText(file);
 }
+
 document.getElementById('file-input')
   .addEventListener('change', readSingleFile, false);
+
+// read xml file for loading to category
+
+var xhrObj = new XMLHttpRequest();
+
+xhrObj.open('GET', "gen_category.xml", false);
+xhrObj.send('');
+
+x = xhrObj.responseText;
+workspace.updateToolbox(x);

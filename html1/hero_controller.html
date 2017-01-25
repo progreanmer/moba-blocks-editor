@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>hero_controller module &mdash; API Game Simulation 0.0.1 documentation</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+
+
+
+
+    <link rel="top" title="API Game Simulation 0.0.1 documentation" href="index.html"/>
+        <link rel="up" title="api_game" href="modules.html"/>
+        <link rel="next" title="my_hero module" href="my_hero.html"/>
+        <link rel="prev" title="api_game" href="modules.html"/>
+
+
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+
+
+            <a href="index.html" class="icon icon-home"> API Game Simulation
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                0.0.1
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">api_game</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">hero_controller module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="my_hero.html">my_hero module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status_observer.html">status_observer module</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">API Game Simulation</a>
+      </nav>
+
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+
+          <li><a href="modules.html">api_game</a> &raquo;</li>
+
+    <li>hero_controller module</li>
+      <li class="wy-breadcrumbs-aside">
+
+
+            <a href="_sources/hero_controller.txt" rel="nofollow"> View page source</a>
+
+
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <div class="section" id="module-hero_controller">
+<span id="hero-controller-module"></span><h1>hero_controller module<a class="headerlink" href="#module-hero_controller" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="hero_controller.HeroController">
+<em class="property">class </em><code class="descclassname">hero_controller.</code><code class="descname">HeroController</code><a class="headerlink" href="#hero_controller.HeroController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>The HeroController class is controlling the actor in serveral events.</p>
+<dl class="method">
+<dt id="hero_controller.HeroController.attack">
+<code class="descname">attack</code><span class="sig-paren">(</span><em>Enemy</em>, <em>msg=''</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroController.attack" title="Permalink to this definition">¶</a></dt>
+<dd><p>The attack method is controlling the actor to attack Enemy.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroController.is_allies">
+<code class="descname">is_allies</code><span class="sig-paren">(</span><em>unit</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroController.is_allies" title="Permalink to this definition">¶</a></dt>
+<dd><p>the is_allies method use to check allies of this actor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroController.is_enemy">
+<code class="descname">is_enemy</code><span class="sig-paren">(</span><em>unit</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroController.is_enemy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The is_enemy method use to check Enemy of this actor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroController.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroController.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>The movement method move the actor.
+argument in function have 3 argument: pos_x,pos_y</p>
+<p>pos_x is integer or float for position x,
+pos_y is integer or float for position y,
+msg is string for message which want to server send when this function done.</p>
+<dl class="docutils">
+<dt>recommend:</dt>
+<dd>Server will send message &#8220;found enemy&#8221; when unit found enemy for you want to handle that event.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hero_controller.HeroController.rev_message">
+<code class="descname">rev_message</code><em class="property"> = None</em><a class="headerlink" href="#hero_controller.HeroController.rev_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hero_obj is Object in class the game.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroController.update_message">
+<code class="descname">update_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroController.update_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method use to update message from server for handle event when your hero found some event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroController.update_status">
+<code class="descname">update_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroController.update_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method use to update status from server for HeroController.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroController.use_skill">
+<code class="descname">use_skill</code><span class="sig-paren">(</span><em>target</em>, <em>hero_skill=0</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroController.use_skill" title="Permalink to this definition">¶</a></dt>
+<dd><p>The use_skill method is controlling the actor use skill which actor
+have to target.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hero_controller.HeroStatus">
+<em class="property">class </em><code class="descclassname">hero_controller.</code><code class="descname">HeroStatus</code><a class="headerlink" href="#hero_controller.HeroStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>The HeroStatus class is monitor for look status or return status of hero
+object in the game.</p>
+<dl class="method">
+<dt id="hero_controller.HeroStatus.get_enemy_hp">
+<code class="descname">get_enemy_hp</code><span class="sig-paren">(</span><em>enemy</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroStatus.get_enemy_hp" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>The get_enemy_hp method return hp in enemy in enemy_list attibute</div></blockquote>
+<p>of Hero class.
+if enemy is&#8217;nt in enemy_list will return 0.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroStatus.get_hp">
+<code class="descname">get_hp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroStatus.get_hp" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method return hp attibute  in Hero class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroStatus.get_item_in_hero">
+<code class="descname">get_item_in_hero</code><span class="sig-paren">(</span><em>hero</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroStatus.get_item_in_hero" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>The get_item_in_hero method return the list of item in the actor who want</div></blockquote>
+<p>to know.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.HeroStatus.get_mp">
+<code class="descname">get_mp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.HeroStatus.get_mp" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method return mp attibute in Hero class.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hero_controller.UsingItem">
+<em class="property">class </em><code class="descclassname">hero_controller.</code><code class="descname">UsingItem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>The UsingItem class</p>
+<dl class="method">
+<dt id="hero_controller.UsingItem.buy_item">
+<code class="descname">buy_item</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.buy_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method control hero to buy item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.can_buy_item">
+<code class="descname">can_buy_item</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.can_buy_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method return boolean from item which can buy.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.can_sell_item">
+<code class="descname">can_sell_item</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.can_sell_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method return boolean from item which can sell.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.can_use">
+<code class="descname">can_use</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.can_use" title="Permalink to this definition">¶</a></dt>
+<dd><p>The can_use method return true if the item can use in the time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.get_damage">
+<code class="descname">get_damage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.get_damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get_damage method return damage of the item can make.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.get_delay">
+<code class="descname">get_delay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.get_delay" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get_delay method return the delay of available the item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.get_own_item">
+<code class="descname">get_own_item</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.get_own_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method return List of owner this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.get_prize_when_buy">
+<code class="descname">get_prize_when_buy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.get_prize_when_buy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get_prize_when_buy method return prize of item in the shop.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.get_prize_when_sell">
+<code class="descname">get_prize_when_sell</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.get_prize_when_sell" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get_prize_when_sell method return prize of item when sell item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.get_stack_in_hero">
+<code class="descname">get_stack_in_hero</code><span class="sig-paren">(</span><em>hero</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.get_stack_in_hero" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get_stack method return the number of item in the hero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.get_use_mana">
+<code class="descname">get_use_mana</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.get_use_mana" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get_use_mana method return mana of item using.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hero_controller.UsingItem.sell_item">
+<code class="descname">sell_item</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#hero_controller.UsingItem.sell_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method control hero to sell item.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="my_hero.html" class="btn btn-neutral float-right" title="my_hero module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+        <a href="modules.html" class="btn btn-neutral" title="api_game" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Aran &amp; Phutthewan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+
+
+</body>
+</html>

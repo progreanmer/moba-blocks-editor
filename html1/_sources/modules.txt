@@ -1,0 +1,9 @@
+api_game
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   hero_controller
+   my_hero
+   status_observer
