@@ -36,6 +36,11 @@
         <block type="func"></block>
         <block type="var_out"></block>
         <block type="var_in"></block>
+        <block type="ck_item"></block>
+        <block type="func_call"></block>
+    </category>
+    <category name="time">
+      <block type="time_sleep"></block>
     </category>
     <category name="Hero Controller">
         <block type="aliance_message"></block>

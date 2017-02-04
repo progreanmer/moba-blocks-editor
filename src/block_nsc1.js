@@ -22,7 +22,7 @@ var thisBlock = this;
 var attack={
   "message0" : "attack Enemy = %1 msg = %2 .",
   "args0": [
-    {"type":"input_value", "name": "msg","check":["String", "Array"]},
+    {"type":"input_value", "name": "Enemy","check":["String", "Array"]},
     {"type":"input_value", "name": "msg","check":["String", "Array"]},
   ],
   "previousStatement": null,
@@ -523,6 +523,67 @@ this.jsonInit(bc_in);
 var thisBlock = this;
     this.setTooltip(function() {
   return "block for check something in something"
+    });
+  }
+};
+
+var ck_item ={
+  "message0" : " %1 %2 ",
+  "args0": [
+    {"type":"field_input", "name": "ck_item", "text": "item_name"},
+    {"type":"input_value", "name": "ck_in", "check": ["String","Array,","Boolean"]}
+  ],
+  "type" : "output",
+  "output" : "Boolean",
+  "colour": 350
+};
+
+Blockly.Blocks["ck_item"] = {
+  init: function() {
+this.jsonInit(ck_item);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "block for check something in something"
+    });
+  }
+};
+
+var time_sleep={
+  "message0" : "sleep time %1 second.",
+  "args0": [
+    {"type":"input_value", "name": "sp_time","check":"Number"}
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour":150
+};
+
+Blockly.Blocks["time_sleep"] = {
+  init: function() {
+this.jsonInit(time_sleep);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "Sleep time in initial second."
+    });
+  }
+};
+
+var func_call={
+  "message0" : "%1 function.",
+  "args0": [
+    {"type":"field_input", "name": "fn_name","text":"Name_of_function"}
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour":350
+};
+
+Blockly.Blocks["func_call"] = {
+  init: function() {
+this.jsonInit(func_call);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "call another function in one function."
     });
   }
 };

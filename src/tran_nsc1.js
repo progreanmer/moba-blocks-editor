@@ -34,7 +34,12 @@ var ITEMTRAN = {
 };
   var itemtran = ITEMTRAN[block.getFieldValue('item')];
   var arg0 = Blockly.Python.valueToCode(block,"msg") || "";
-  var code = "self.controller.buy_item(" + itemtran + ","+ arg0 + ")\n";
+  if(arg0 == ""){
+    var code = "self.controller.buy_item(" + itemtran + ")\n";
+  }
+  else{
+    var code = "self.controller.buy_item(" + itemtran + ","+ arg0 + ")\n";
+  }
  return code;
 }
 
@@ -87,19 +92,24 @@ Blockly.Python["move"] = function(block) {
 }
 
 Blockly.Python["update_message"] = function(block) {
-  var code = "self.controller.update_message())";
- return [code, Blockly.Python.ORDER_NONE];
+  var code = "self.controller.update_message()\n";
+ return code;
 }
 
 Blockly.Python["update_status"] = function(block) {
-  var code = "self.controller.update_status())";
- return [code, Blockly.Python.ORDER_NONE];
+  var code = "self.controller.update_status()\n";
+ return code;
 }
 
 Blockly.Python["upgrade_skill"] = function(block) {
   var arg0 = Blockly.Python.valueToCode(block,"skill_num") || "0";
   var arg1 = Blockly.Python.valueToCode(block,"msg") || "''";
-  var code = "self.controller.upgrade_skill(" + arg0 + "," + arg1 + ")\n";
+  if (arg1 == "''"){
+    var code = "self.controller.ungrade_skill(" + arg0 + ")\n";
+  }
+  else{
+    var code = "self.controller.upgrade_skill(" + arg0 + "," + arg1 + ")\n";
+  }
  return code;
 }
 
@@ -173,4 +183,23 @@ Blockly.Python["bc_in"] = function(block){
   var arg0 = Blockly.Python.valueToCode(block,"bc_in") || "NONE";
   var code = "in" + " " +arg0;
  return [code, Blockly.Python.ORDER_RELATIONAL];
+}
+
+Blockly.Python["ck_item"] = function(block){
+  var arg0 = block.getFieldValue("ck_item");
+  var arg1 = Blockly.Python.valueToCode(block,"ck_in") || "NONE";
+  var code = "'" + arg0 + "'" + " " + arg1;
+ return [code, Blockly.Python.ORDER_RELATIONAL];
+}
+
+Blockly.Python["time_sleep"] = function(block){
+  var arg0 = Blockly.Python.valueToCode(block,"sp_time") || "0";
+  var code = "time.sleep(" + arg0 + ")\n";
+ return code;
+}
+
+Blockly.Python["func_call"] = function(block){
+  var arg0 = block.getFieldValue("fn_name");
+  var code = "self." + arg0 + "()\n"
+ return code;
 }
