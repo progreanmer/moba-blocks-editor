@@ -1,0 +1,7 @@
+hero_controller module
+======================
+
+.. automodule:: hero_controller
+    :members:
+    :undoc-members:
+    :show-inheritance:

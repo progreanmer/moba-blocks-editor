@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>status_observer module &mdash; API Game Simulation 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="API Game Simulation 0.0.1 documentation" href="index.html"/>
+        <link rel="up" title="api_game" href="modules.html"/>
+        <link rel="prev" title="my_hero module" href="my_hero.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> API Game Simulation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">api_game</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hero_controller.html">hero_controller module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="my_hero.html">my_hero module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">status_observer module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">API Game Simulation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">api_game</a> &raquo;</li>
+      
+    <li>status_observer module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/status_observer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-status_observer">
+<span id="status-observer-module"></span><h1>status_observer module<a class="headerlink" href="#module-status_observer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="status_observer.Attacking">
+<em class="property">class </em><code class="descclassname">status_observer.</code><code class="descname">Attacking</code><a class="headerlink" href="#status_observer.Attacking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#status_observer.Controller" title="status_observer.Controller"><code class="xref py py-class docutils literal"><span class="pre">status_observer.Controller</span></code></a></p>
+<p>Control hero about attacking.</p>
+<dl class="method">
+<dt id="status_observer.Attacking.SelectNearTarget">
+<code class="descname">SelectNearTarget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.Attacking.SelectNearTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method find nearest enemy to be the target.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.Attacking.SelectTarget">
+<code class="descname">SelectTarget</code><span class="sig-paren">(</span><em>enemy</em><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.Attacking.SelectTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control hero lock on target for attack.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.Attacking.SelectTargetHightHp">
+<code class="descname">SelectTargetHightHp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.Attacking.SelectTargetHightHp" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method find enemy which have highest Hp in enemy list to be the target.
+The enemy list is list of enemy which in the vision of hero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.Attacking.SelectTargetLowHp">
+<code class="descname">SelectTargetLowHp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.Attacking.SelectTargetLowHp" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method find enemy which have lowest Hp in enemy list to be the target.
+The enemy list is list of enemy which in the vision of hero.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="status_observer.Controller">
+<em class="property">class </em><code class="descclassname">status_observer.</code><code class="descname">Controller</code><a class="headerlink" href="#status_observer.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>The Controller class is abstract class for implement basic command to play
+MOBA game.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="status_observer.HeroItem">
+<em class="property">class </em><code class="descclassname">status_observer.</code><code class="descname">HeroItem</code><a class="headerlink" href="#status_observer.HeroItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#status_observer.Controller" title="status_observer.Controller"><code class="xref py py-class docutils literal"><span class="pre">status_observer.Controller</span></code></a></p>
+<p>Control hero about item.
+Example:</p>
+<blockquote>
+<div>1.Hero item using.
+2.Hero item selling.
+3.Hero item buying.
+4.Hero item checking type item.</div></blockquote>
+<dl class="method">
+<dt id="status_observer.HeroItem.buy_cheap_item">
+<code class="descname">buy_cheap_item</code><span class="sig-paren">(</span><em>item_list</em><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.HeroItem.buy_cheap_item" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>Control hero to buy item which cheapest in item_list and hero can</div></blockquote>
+<p>buy. If hero can&#8217;t buy it, this method will not buy and operate
+next Instruction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.HeroItem.buy_expensive_item">
+<code class="descname">buy_expensive_item</code><span class="sig-paren">(</span><em>item_list</em><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.HeroItem.buy_expensive_item" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>Control hero to buy item which most expensive in item_list and hero can</div></blockquote>
+<p>buy. If hero can&#8217;t buy it, this method will not buy and operate
+next Instruction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.HeroItem.buy_item_order">
+<code class="descname">buy_item_order</code><span class="sig-paren">(</span><em>item_list</em><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.HeroItem.buy_item_order" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>Control hero to buy respectively item which in item_list and hero can</div></blockquote>
+<p>buy. If hero can&#8217;t buy it, this method will not buy and operate
+next Instruction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.HeroItem.sell_item">
+<code class="descname">sell_item</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.HeroItem.sell_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control hero to sell item which hero possess.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="status_observer.Moving">
+<em class="property">class </em><code class="descclassname">status_observer.</code><code class="descname">Moving</code><a class="headerlink" href="#status_observer.Moving" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#status_observer.Controller" title="status_observer.Controller"><code class="xref py py-class docutils literal"><span class="pre">status_observer.Controller</span></code></a></p>
+<p>Controlle hero about moving.
+Example:</p>
+<blockquote>
+<div>1.Hero move to required position.
+2.Hero move to the base.
+3.Hero stop moving.</div></blockquote>
+<dl class="method">
+<dt id="status_observer.Moving.move_hero">
+<code class="descname">move_hero</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.Moving.move_hero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control hero move to required position x and y.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.Moving.move_to_base">
+<code class="descname">move_to_base</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.Moving.move_to_base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control hero move to own base.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="status_observer.Moving.stop_moving">
+<code class="descname">stop_moving</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.Moving.stop_moving" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control hero stop moving.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="status_observer.SkillUsing">
+<em class="property">class </em><code class="descclassname">status_observer.</code><code class="descname">SkillUsing</code><a class="headerlink" href="#status_observer.SkillUsing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#status_observer.Controller" title="status_observer.Controller"><code class="xref py py-class docutils literal"><span class="pre">status_observer.Controller</span></code></a></p>
+<p>Control hero about skill using.
+Example:</p>
+<blockquote>
+<div>1.hero using the skill which can use in the moment time.
+2.hero using the damaged skill.
+3.hero using the support skill.
+4.hero using the <a href="#id1"><span class="problematic" id="id2">*</span></a>escape skill.
+5.hero using order skill.</div></blockquote>
+<p><a href="#id3"><span class="problematic" id="id4">*</span></a>escape skill about change position the hero</p>
+<dl class="method">
+<dt id="status_observer.SkillUsing.order_upgrade_skill">
+<code class="descname">order_upgrade_skill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.SkillUsing.order_upgrade_skill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="status_observer.SkillUsing.order_using__skill">
+<code class="descname">order_using__skill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.SkillUsing.order_using__skill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="status_observer.SkillUsing.use_skill">
+<code class="descname">use_skill</code><span class="sig-paren">(</span><em>skill</em><span class="sig-paren">)</span><a class="headerlink" href="#status_observer.SkillUsing.use_skill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="my_hero.html" class="btn btn-neutral" title="my_hero module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Aran &amp; Phutthewan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

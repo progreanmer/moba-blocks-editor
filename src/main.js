@@ -1,41 +1,40 @@
 //show py code from block
 function showCode() {
-
+  Blockly.Python.INDENT = "    ";
   var raw_code = Blockly.Python.workspaceToCode(workspace);
   var split = raw_code.split("\n");
-  var tab2 = "        ";
-  console.log(split);
+  var tab = "    ";
 
   var code = 'from sim_monitor.sim_client.api_game.hero_controller import HeroController\n'
   +'from sim_monitor.sim_client.api_game.my_hero import MyHero\n'
+  +'from sim_monitor.model.status import status\n'
   +'import time\n\n\n'
   + 'class x(MyHero):\n' + '    def __init__(self):\n' + '        super().__init__()\n'
   + '        self.controller = HeroController()\n'
-  + '        time.sleep(5)\n\n' +'    def run(self):\n';
+  + '        time.sleep(5)\n\n';
   for (n in split){
-    console.log(split[n])
-    code = code + tab2 + split[n] + "\n";
+    code = code + tab + split[n] + "\n";
   }
   alert(code);
 }
 
 //export block to py code
 function exportCode() {
+  Blockly.Python.INDENT = "    ";
 
   var raw_code = Blockly.Python.workspaceToCode(workspace);
   var split = raw_code.split("\n");
-  var tab2 = "        ";
-  console.log(split);
+  var tab = "    ";
 
   var code = 'from sim_monitor.sim_client.api_game.hero_controller import HeroController\n'
   +'from sim_monitor.sim_client.api_game.my_hero import MyHero\n'
+  +'from sim_monitor.model.status import status\n'
   +'import time\n\n\n'
   + 'class x(MyHero):\n' + '    def __init__(self):\n' + '        super().__init__()\n'
   + '        self.controller = HeroController()\n'
-  + '        time.sleep(5)\n\n' +'    def run(self):\n';
+  + '        time.sleep(5)\n\n';
   for (n in split){
-    console.log(split[n])
-    code = code + tab2 + split[n] + "\n";
+    code = code + tab + split[n] + "\n";
   }
 
   Blockly.Python.INFINITE_LOOP_TRAP = null;

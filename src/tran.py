@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from html.parser import HTMLParser
-f = open("../html1/hero_controller.html")
+f = open("../html3/hero_controller.html")
 html = f.read()
 f.close()
 f2 = open('tran.js','w')
@@ -55,4 +55,14 @@ for met in soup.find_all("dl", attrs={"class": "method"}):
     f2.write('+' + '")' + '\\n' + '";\n')
     f2.write(' return code;\n' + '}' +'\n\n')
     j = j+1
+
+#Here is addon translate block
+
+#int_var
+f2.write('Blockly.Python["int_var"] = function(block){\n')
+f2.write('var arg1 = Blockly.Python.valueToCode(block,"int_name") || "";\n')
+f2.write('var arg2 = Blockly.Python.valueToCode(block,"int_val") || "0";\n')
+f2.write('var code = arg1 + " = " + arg2 + "\n";\n')
+f2.write(' return code;\n}\n')
+
 f2.close()

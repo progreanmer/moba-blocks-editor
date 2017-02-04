@@ -1,10 +1,11 @@
 from bs4 import BeautifulSoup
 from html.parser import HTMLParser
 
-f = open("../html1/hero_controller.html")
+f = open("../html3/hero_controller.html")
 html = f.read()
 f.close()
 f2 = open('hero_controller.js','w')
+f3 = open('test.txt','w')
 soup = BeautifulSoup(html, 'html.parser')
 i = 0
 
@@ -16,7 +17,8 @@ for met in soup.find_all("dl", attrs={"class": "method"}):
 
     #write message of each block
     for arg_name in met.find_all('em'):
-        arg[j] = arg_name.get_text()
+        g = HTMLParser()
+        arg[j] = g.unescape(arg_name.get_text())
         j = j + 1
     for func in met.find_all('code'):
         code_temp[i] = func.get_text()
@@ -33,27 +35,26 @@ for met in soup.find_all("dl", attrs={"class": "method"}):
     p_text = {}
     p_text[0] = ''
     p_text[1] = ''
+    p_text[2] = ''
     type_check = {}
     type_check[0] = 'Number'
     type_check[1] = 'Number'
     type_check[2] = 'Number'
     type_check[3] = 'Number'
-    k = 0
-    for p_find in met.find_all('p'):
-        h = HTMLParser()
-        p_text[k] = h.unescape(p_find.get_text())
-        k = k+1
+    for p_find in met.find_all('dd'):
+        for a in p_find.find_all('dd'):
+            h = HTMLParser()
+            p_text[1] = h.unescape(a.get_text())
+            f3.write(str(i)+'---' + p_text[1] + '\n')
     #get type of each variable in list type_check
     k = 0 #Reset k
     if(p_text[1] != ''):
         for check in p_text[1].split(','):
             for c_type in check.split():
-                print(c_type)
                 if( c_type ==  'integer' or c_type == 'float'):
                     type_check[k] = '"Number"'
                 elif( c_type == 'string'):
                     type_check[k] = '["String", "Array"]'
-                # print(type_check[k])
             k = k+1
 
     f2.write(' "args0": [\n')
@@ -86,3 +87,4 @@ for met in soup.find_all("dl", attrs={"class": "method"}):
     i = i + 1
 
 f2.close()
+f3.close()

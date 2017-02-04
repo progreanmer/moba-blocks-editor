@@ -11,15 +11,15 @@ let mainWindow
 
 app.on('ready', function(){
   var subpy = require('child_process').spawn('node', ['server.js'])
-  var subpy2 = require('child_process').spawn('python', ['src/read_file.py'])
-  var subpy3 = require('child_process').spawn('python', ['src/tran.py']);
+  // var subpy2 = require('child_process').spawn('python', ['src/read_file.py'])
+  // var subpy3 = require('child_process').spawn('python', ['src/tran.py']);
 
   var rq = require('request-promise');
   var mainAddr = 'http://localhost:8181';
 
   var openWindow = function(){
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 1000, height: 1500});
+    mainWindow = new BrowserWindow({width: 1500, height: 1500});
     // and load the index.html of the app.
     // mainWindow.loadURL('file://' + __dirname + '/index.html');
     mainWindow.loadURL(mainAddr);
@@ -33,8 +33,8 @@ app.on('ready', function(){
       mainWindow = null;
       // kill python
       subpy.kill('SIGINT');
-      subpy2.kill('SIGINT');
-      subpy3.kill('SIGINT');
+      // subpy2.kill('SIGINT');
+      // subpy3.kill('SIGINT');
     });
   };
 

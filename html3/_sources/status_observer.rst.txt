@@ -1,0 +1,7 @@
+status_observer module
+======================
+
+.. automodule:: status_observer
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -152,3 +152,10 @@ var code = "hero_controller.UsingItem.sell_item("+")\n";
  return code;
 }
 
+Blockly.Python["var"] = function(block) {
+
+var arg0 = Blockly.Python.valueToCode(block,"int_name") || "";
+var arg1 = Blockly.Python.valueToCode(block,"int_val") || "0";
+var code = arg0 + " = " + arg1 + "\n";
+ return code;
+}

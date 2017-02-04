@@ -1,0 +1,14 @@
+0---msg is string,
+0---Server will send message “found enemy” when unit found enemy for you want to handle that event.
+1---Enemy is string
+msg is string
+2---item is string
+msg is string
+5---you want to your hero use item or change action if hp lower than 10%.
+you can use this method to check.
+8---you want to your hero use item or change action if mana or mp lower than 10%.
+you can use this method to check.
+11---pos_x is integer or float for position x,
+pos_y is integer or float for position y,
+msg is string for message which want to server send when this function finish done.
+11---Server will send message “found enemy” when unit found enemy for you want to handle that event.

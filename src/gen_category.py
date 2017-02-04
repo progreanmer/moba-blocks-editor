@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-f = open('../html1/hero_controller.html')
+f = open('../html3/hero_controller.html')
 heroC = f.read()
 f.close()
 soup = BeautifulSoup(heroC, 'html.parser')
