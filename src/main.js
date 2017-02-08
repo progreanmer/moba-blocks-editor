@@ -1,4 +1,5 @@
 //show py code from block
+
 function showCode() {
   Blockly.Python.INDENT = "    ";
   var raw_code = Blockly.Python.workspaceToCode(workspace);

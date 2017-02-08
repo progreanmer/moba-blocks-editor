@@ -454,7 +454,7 @@ var for_in = {
   ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": 120
+  "colour": 100
 }
 Blockly.Blocks["for_in"] = {
   init: function() {
@@ -514,7 +514,7 @@ var bc_in ={
   ],
   "type" : "output",
   "output" : "Boolean",
-  "colour": 210
+  "colour": 200
 };
 
 Blockly.Blocks["bc_in"] = {
@@ -555,7 +555,7 @@ var time_sleep={
   ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour":150
+  "colour":400
 };
 
 Blockly.Blocks["time_sleep"] = {

@@ -74,7 +74,7 @@ Blockly.Python["get_mp_percent"] = function(block) {
 }
 
 Blockly.Python["get_near_enemy"] = function(block) {
-  var code = "self.controller.get_near_enemy())";
+  var code = "self.controller.get_near_enemy()";
  return [code, Blockly.Python.ORDER_NONE];
 }
 

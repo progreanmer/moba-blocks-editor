@@ -1,0 +1,469 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="func" id="~(i;n8d{Ws+#H+|YAj:C" x="-512" y="-476">
+    <field name="func_name">move</field>
+    <statement name="internal_func">
+      <block type="buy_item" id="cT|j+JHxO7M!XQs?Nmk+">
+        <field name="item">ITEM9</field>
+        <value name="msg">
+          <block type="text" id=")W1Jx%oF2L^QQRGw}~_n">
+            <field name="TEXT">start</field>
+          </block>
+        </value>
+        <next>
+          <block type="move" id="}l)nDB{P0?tl9uMx!mNt">
+            <value name="pos_x">
+              <block type="math_number" id="Oh^xj#A58;t(@Nr.F#ZI">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
+            <value name="pos_y">
+              <block type="math_number" id="cNk?@LVwv:+m)vx`n%#:">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
+            <value name="msg">
+              <block type="text" id="v)40Lrm)/xwX7dSIhE:(">
+                <field name="TEXT">end lane</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="N2zO}E`L3f:y%HZU0+f]">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="get_connection" id="|S|)zcUwGYSfC}r~.pQ:"></block>
+                </value>
+                <statement name="DO">
+                  <block type="variable_init" id="59K3+^x4#Uu7lAo|w,3?">
+                    <field name="var_init_name">item_list</field>
+                    <value name="var_val">
+                      <block type="get_item_in_hero" id="D@fq=l{oOmC#4vKzvA?."></block>
+                    </value>
+                    <next>
+                      <block type="variable_init" id="N.iPYm0b}!N_G-:3B;11">
+                        <field name="var_init_name">hero_gold</field>
+                        <value name="var_val">
+                          <block type="get_gold" id="rDfF@-w;t2vhZypiHbp;"></block>
+                        </value>
+                        <next>
+                          <block type="variable_init" id="Eg]D}v1:r5Mx!N!/a|{L">
+                            <field name="var_init_name">near_enemy</field>
+                            <value name="var_val">
+                              <block type="get_near_enemy" id="my;l2-a8}u!(R6c9Fh5["></block>
+                            </value>
+                            <next>
+                              <block type="variable_init" id="4LPbky@,SFAL_QBh%0jU">
+                                <field name="var_init_name">recieve_message</field>
+                                <value name="var_val">
+                                  <block type="get_rev_message" id="N7(RTim?TXxs/.;D+`)["></block>
+                                </value>
+                                <next>
+                                  <block type="controls_if" id="A)bV|]`K^mj9+Uu`2APV">
+                                    <value name="IF0">
+                                      <block type="logic_compare" id=":JJ6KuVeB8#igS%cfVQK">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="var_out" id="O[EGW%3VO}he[Q7wSgwy">
+                                            <field name="vo_name">recieve_message</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="2y(_=j(^pp=MiEibjolj">
+                                            <field name="TEXT">start</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="move" id="u6kltYMJWkPh|NNq?{+d">
+                                        <value name="pos_x">
+                                          <block type="math_number" id="i6F)W.`c3G1#Nm}^k_W*">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                        <value name="pos_y">
+                                          <block type="math_number" id="}{gsqoD:)*T?04wJBUmb">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                        <value name="msg">
+                                          <block type="text" id=")LF6hh~_sJ.Rs%3(hX}O">
+                                            <field name="TEXT">end lane</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id="|}(CjHf6K/tDp(z(7H6}">
+                                        <value name="IF0">
+                                          <block type="logic_compare" id="iHn(tJ(H98|l@@LPf0rF">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="var_out" id="{c[iYa7C?V(^`kYper~z">
+                                                <field name="vo_name">recieve_message</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="text" id="|xG1~(R*jBEnV^Dj@cJ!">
+                                                <field name="TEXT">found_enemy</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="controls_if" id="KDBbw%jBCt_fpWN8L}R[">
+                                            <mutation else="1"></mutation>
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="uPW4!VduKU%9I62-q6Ik">
+                                                <field name="OP">NEQ</field>
+                                                <value name="A">
+                                                  <block type="text_length" id="M]3sP,[Du%}=zqg@7qd.">
+                                                    <value name="VALUE">
+                                                      <block type="var_out" id="mdTc/xu/HG%{Z%YEo-Hz">
+                                                        <field name="vo_name">near_enemy</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="^x%Q9`pap3;{q+``Tod;">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="attack" id="9Ww=R1cN*aYTs:a*ZSWG">
+                                                <value name="Enemy">
+                                                  <block type="var_out" id="3{y6~C0h.)n)|caxhOb.">
+                                                    <field name="vo_name">near_enemy[0]</field>
+                                                  </block>
+                                                </value>
+                                                <value name="msg">
+                                                  <block type="text" id="5PDn5-lIfn:yy.Xb1W{M">
+                                                    <field name="TEXT">start</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <statement name="ELSE">
+                                              <block type="move" id="jG+#FuDilFzqc2{yaQ,3">
+                                                <value name="pos_x">
+                                                  <block type="math_number" id="F:5}TG)H){_/QuO;M![w">
+                                                    <field name="NUM">1000</field>
+                                                  </block>
+                                                </value>
+                                                <value name="pos_y">
+                                                  <block type="math_number" id="RrV%Fa1L@ADRCP+D-.`3">
+                                                    <field name="NUM">1000</field>
+                                                  </block>
+                                                </value>
+                                                <value name="msg">
+                                                  <block type="text" id="y@BpY(pf/fj.3uWM{C2h">
+                                                    <field name="TEXT">end lane</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="controls_if" id="E0BcSh|MZ]=x~p2I@?w{">
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="{ZR,@Yf`soXYNXS}neUY">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="var_out" id="`trB=k6Gh*w]mSK-d+Z/">
+                                                    <field name="vo_name">recieve_message</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="text" id="7:BC{5sy^^MI5sA63x-1">
+                                                    <field name="TEXT">battle</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="controls_if" id="P;Bv2dwsw:9xgR5ua?!o">
+                                                <value name="IF0">
+                                                  <block type="logic_compare" id="qap@r^G5e.!;ry0Z6vW3">
+                                                    <field name="OP">NEQ</field>
+                                                    <value name="A">
+                                                      <block type="text_length" id="hQBWczDX-=N|MXw1A6RX">
+                                                        <value name="VALUE">
+                                                          <block type="var_out" id="V5J[sqBiAqe;Bek,yx~/">
+                                                            <field name="vo_name">near_enemy</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id="1@dyl%y/5uqytPx6vH[v">
+                                                        <field name="NUM">0</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <statement name="DO0">
+                                                  <block type="use_skill" id="gmclk=tX6JkL(yqa8j?q">
+                                                    <value name="skill_num">
+                                                      <block type="math_number" id="56Q66EEaGp?_lCi!IsId">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="target">
+                                                      <block type="var_out" id="@-PBj)M|iV[K4ncVcd=1">
+                                                        <field name="vo_name">near_enemy[0]</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="msg">
+                                                      <block type="text" id="znIM7DG!EebN3BxUtt~/">
+                                                        <field name="TEXT">start</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="attack" id="cE|:GZ)`N/=cRb8|OWPO">
+                                                        <value name="Enemy">
+                                                          <block type="var_out" id="sS_K5A!ndHN6+m`QHUFI">
+                                                            <field name="vo_name">near_enemy[0]</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="msg">
+                                                          <block type="text" id="I24EAe1L7d^`,|V.Y7[7">
+                                                            <field name="TEXT">start</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="controls_if" id="G;TAal;_MGVwo|sqP)~g">
+                                                            <mutation else="1"></mutation>
+                                                            <value name="IF0">
+                                                              <block type="logic_compare" id="[DKisEjV+C`bqGG^q!,s">
+                                                                <field name="OP">LTE</field>
+                                                                <value name="A">
+                                                                  <block type="get_hp_percent" id=";vy@*].F`F?F.A=mpZUh"></block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="math_number" id="R76Sk!_Y|+Zceibdg=jZ">
+                                                                    <field name="NUM">0.5</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                              <block type="use_item" id="SL%2/+#6xB)@UuA0,nCe">
+                                                                <field name="item">Potion</field>
+                                                                <value name="msg">
+                                                                  <block type="text" id="|u[HaS_8`(43QUO*2}db">
+                                                                    <field name="TEXT">battle</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </statement>
+                                                            <statement name="ELSE">
+                                                              <block type="move" id="teThx;SWtb@{_PyU^z`*">
+                                                                <value name="pos_x">
+                                                                  <block type="math_number" id="*GNts]LGR02;AkE8Hci6">
+                                                                    <field name="NUM">1000</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="pos_y">
+                                                                  <block type="math_number" id="nRzLfq?Nmerbk{[+q-s5">
+                                                                    <field name="NUM">1000</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="msg">
+                                                                  <block type="text" id="Z7?qo+]1/Nb8.[OTkTm)">
+                                                                    <field name="TEXT">end lane</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </statement>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </statement>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="controls_if" id="(V5*Q,PoBNC*TW1;#glV">
+                                                <value name="IF0">
+                                                  <block type="logic_compare" id="qT~1{wpwgjqPW%(WQFg^">
+                                                    <field name="OP">EQ</field>
+                                                    <value name="A">
+                                                      <block type="var_out" id="mmdFET{U?aS^9!y%]/NB">
+                                                        <field name="vo_name">recieve_message</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="text" id="SW90qZh)10g~e@KVO08-">
+                                                        <field name="TEXT">reborn</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <statement name="DO0">
+                                                  <block type="controls_if" id="cWhwZbkB(rKCy(XKpyj!">
+                                                    <value name="IF0">
+                                                      <block type="logic_operation" id="CoW!gax#R2M-m*;Z]K39">
+                                                        <field name="OP">AND</field>
+                                                        <value name="A">
+                                                          <block type="ck_item" id="5pFM?~QNOAra(}6Is-jW">
+                                                            <field name="ck_item">Potion</field>
+                                                            <value name="ck_in">
+                                                              <block type="logic_negate" id=")wYcUojjDhkbzX/H+D+3">
+                                                                <value name="BOOL">
+                                                                  <block type="bc_in" id="x4bT+,uw0n.wVO_:H|Kk">
+                                                                    <value name="bc_in">
+                                                                      <block type="var_out" id="MUqeOhZJaowytLOJ,p+m">
+                                                                        <field name="vo_name">item_list</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="logic_compare" id="-*4-FYpxZw-,:Qiz1+xF">
+                                                            <field name="OP">GT</field>
+                                                            <value name="A">
+                                                              <block type="var_out" id="Sjyk:YVSO-bp2SYC89|J">
+                                                                <field name="vo_name">hero_gold</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="math_number" id="@dC:;2jdJHZkx~eK1))v">
+                                                                <field name="NUM">100</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <statement name="DO0">
+                                                      <block type="buy_item" id="uI.W81.S615|M~^HfD5*">
+                                                        <field name="item">ITEM9</field>
+                                                        <value name="msg">
+                                                          <block type="text" id="?!@T/D_Ct(nxcee8+d6-">
+                                                            <field name="TEXT">start</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="move" id="I~3+M:KVoaDPge5x-I`.">
+                                                        <value name="pos_x">
+                                                          <block type="math_number" id="m1O.^?[y(8V85LE)9wvf">
+                                                            <field name="NUM">1000</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="pos_y">
+                                                          <block type="math_number" id="yoksuUtQA%u1Hr(qU={1">
+                                                            <field name="NUM">1000</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="msg">
+                                                          <block type="text" id="Q(Gf(A*cvp#!Z;80j.yl">
+                                                            <field name="TEXT">end_lane</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </statement>
+                                                <next>
+                                                  <block type="update_message" id="eEl!YZAPe0Vg1#)+r(7o">
+                                                    <next>
+                                                      <block type="update_status" id="[dl0x0VN+ou~PZ8CxLru">
+                                                        <next>
+                                                          <block type="time_sleep" id="Kgf+,;(=n.RoF6M3pz|^">
+                                                            <value name="sp_time">
+                                                              <block type="math_number" id="7NqIG?bR,T,VWAlj.?t,">
+                                                                <field name="NUM">0.01</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="func" id="@iMVhE|ak+DQkJMf:vvM">
+        <field name="func_name">upgrade_skill</field>
+        <statement name="internal_func">
+          <block type="time_sleep" id="R=i~uK4B|qBb%o9Hl{Cx">
+            <value name="sp_time">
+              <block type="math_number" id="tEj%}HcBVOt)v:TpF*l{">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <next>
+              <block type="upgrade_skill" id="Bc[u}lv@9dv~?8BhMY!7">
+                <value name="skill_num">
+                  <block type="math_number" id="+y`db*N?v5H90Q*!mqEu">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="time_sleep" id="WR9KOj}+A=xc;,8(*u%I">
+                    <value name="sp_time">
+                      <block type="math_number" id="vk|=mguLQHyzNKwlzq|k">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="buy_item" id="`I(B}2TO@;uA#)b~7l}L">
+                        <field name="item">ITEM4</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="func" id="UWX[/[DQ!)0NuFkC`bJS">
+            <field name="func_name">run</field>
+            <statement name="internal_func">
+              <block type="func_call" id="L^/FN~)/gv?53}+hJS,h">
+                <field name="fn_name">move</field>
+                <next>
+                  <block type="func_call" id="f}w/BaO9EyMu5bM[Ve3X">
+                    <field name="fn_name">upgrade_skill</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
