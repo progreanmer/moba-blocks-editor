@@ -35,10 +35,10 @@ var ITEMTRAN = {
   var itemtran = ITEMTRAN[block.getFieldValue('item')];
   var arg0 = Blockly.Python.valueToCode(block,"msg") || "";
   if(arg0 == ""){
-    var code = "self.controller.buy_item(" + itemtran + ")\n";
+    var code = "self.controller.buy_item(" + "'" +itemtran + "'" + ")\n";
   }
   else{
-    var code = "self.controller.buy_item(" + itemtran + ","+ arg0 + ")\n";
+    var code = "self.controller.buy_item(" + "'" + itemtran + "'" + ","+ arg0 + ")\n";
   }
  return code;
 }
@@ -69,7 +69,7 @@ Blockly.Python["get_max_mp"] = function(block) {
 }
 
 Blockly.Python["get_mp_percent"] = function(block) {
-  var code = "self.controller.get_mp_percent())";
+  var code = "self.controller.get_mp_percent()";
  return [code, Blockly.Python.ORDER_NONE];
 }
 
@@ -79,7 +79,7 @@ Blockly.Python["get_near_enemy"] = function(block) {
 }
 
 Blockly.Python["get_position"] = function(block) {
-  var code = "self.controller.get_position())";
+  var code = "self.controller.get_position()";
  return [code, Blockly.Python.ORDER_NONE];
 }
 
@@ -87,7 +87,7 @@ Blockly.Python["move"] = function(block) {
   var arg0 = Blockly.Python.valueToCode(block,"pos_x") || "0";
   var arg1 = Blockly.Python.valueToCode(block,"pos_y") || "0";
   var arg2 = Blockly.Python.valueToCode(block,"msg") || "''";
-  var code = "self.controller.get_position(" + arg0 + "," + arg1 + "," + arg2 + ")\n";
+  var code = "self.controller.move(" + arg0 + "," + arg1 + "," + arg2 + ")\n";
  return code;
 }
 
@@ -116,7 +116,7 @@ Blockly.Python["upgrade_skill"] = function(block) {
 Blockly.Python["use_item"] = function(block) {
   var arg0 = block.getFieldValue('item') || "''";
   var arg1 = Blockly.Python.valueToCode(block,"msg") || "''";
-  var code = "self.controller.use_item(" + arg0 + "," + arg1 + ")\n";
+  var code = "self.controller.use_item(" + "'" +arg0 + "'" + "," + arg1 + ")\n";
  return code;
 }
 
