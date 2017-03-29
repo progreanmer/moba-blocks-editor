@@ -1,6 +1,4 @@
-//show py code from block
-
-function showCode() {
+function gencode(){
   Blockly.Python.INDENT = "    ";
   var raw_code = Blockly.Python.workspaceToCode(workspace);
   var split = raw_code.split("\n");
@@ -16,28 +14,17 @@ function showCode() {
   for (n in split){
     code = code + tab + split[n] + "\n";
   }
+  return code;
+}
+//show py code from block
+function showCode() {
+  code = gencode()
   alert(code);
 }
 
 //export block to py code
 function exportCode() {
-  Blockly.Python.INDENT = "    ";
-
-  var raw_code = Blockly.Python.workspaceToCode(workspace);
-  var split = raw_code.split("\n");
-  var tab = "    ";
-
-  var code = 'from sim_monitor.sim_client.api_game.hero_controller import HeroController\n'
-  +'from sim_monitor.sim_client.api_game.my_hero import MyHero\n'
-  +'from sim_monitor.model.status import status\n'
-  +'import time\n\n\n'
-  + 'class x(MyHero):\n' + '    def __init__(self):\n' + '        super().__init__()\n'
-  + '        self.controller = HeroController()\n'
-  + '        time.sleep(5)\n\n';
-  for (n in split){
-    code = code + tab + split[n] + "\n";
-  }
-
+  code = gencode()
   Blockly.Python.INFINITE_LOOP_TRAP = null;
 
   var gen_file = document.createElement('a');
@@ -98,9 +85,25 @@ function readSingleFile(e) {
   };
   reader.readAsText(file);
 }
-
 document.getElementById('file-input')
   .addEventListener('change', readSingleFile, false);
+
+//rate and valuate
+function rate(){
+  var code = gencode();
+  var sha1_code = new Hashes.SHA1().hex(code);
+  var name = sha1_code + ".log";
+  console.log(name);
+
+  var rfr = new XMLHttpRequest();
+  rfr.open('GET', name , false);
+  rfr.send('');
+
+  log = rfr.responseText;
+
+  console.log(log);
+
+}
 
 // read xml file for loading to category
 

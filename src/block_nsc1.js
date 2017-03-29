@@ -461,7 +461,7 @@ Blockly.Blocks["for_in"] = {
 this.jsonInit(for_in);
 var thisBlock = this;
     this.setTooltip(function() {
-  return "loop for in "
+  return "loop for something in something "
     });
   }
 };

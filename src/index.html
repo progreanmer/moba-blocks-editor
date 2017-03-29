@@ -9,9 +9,11 @@
   <script src="libs/blockly/javascript_compressed.js"></script>
   <script src="libs/blockly/msg/js/en.js"></script>
   <script src="libs/blockly/python_compressed.js"></script>
+  <script src="libs/sha1.js"></script>
   <!-- <script src ="genpy_test.js"></script> -->
   <script src="block_nsc1.js"></script>
   <script src="tran_nsc1.js"></script>
+
   <!-- <script src="gen_block.js"></script> -->
   <!-- <script src="hero_controller.js"></script> -->
 
@@ -50,6 +52,14 @@
     <label class="button">
       <input type="file" id = "file-input">
       Open Block
+    </label>
+    <label class="button">
+      <button onclick="rate()"></button>
+      Rate
+    </label>
+    <label class="button">
+      <button onclick="testsim()"></button>
+      Simualtor test
     </label>
   </p>
     File name: <input id ="fname" type = "text" name = "fname" >
