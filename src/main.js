@@ -155,7 +155,12 @@ function rate(){
   r_cpm = rate_performance(kill, dead);
   // console.log(log);
   rate_result = "-----Code Rating-----\nKill: " + r_kill + "\nSurvive: " + r_survive + "\nFight: " + r_fight + "\nPush: " + r_push + "\nPerformance: " + r_cpm;
-  alert(rate_result);
+  if(start_time == 0 && end_time == 0){
+    alert("ERROR : cannot find log file");
+  }
+  else{
+        alert(rate_result);
+  }
 }
 
 //function for calculate point of kill

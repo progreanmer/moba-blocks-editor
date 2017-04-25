@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Load the  mylib.sh using source comamnd
+NAGA_PATH="$HOME/projects"
+CURRENT_PATH=$PWD
+SIMMAP_PATH=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
+source "$SIMMAP_PATH/../naga-env/bin/activate"
+python3 "$SIMMAP_PATH/run_gui.py"
