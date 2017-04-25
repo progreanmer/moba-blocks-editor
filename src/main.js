@@ -93,41 +93,48 @@ function rate(){
   var code = gencode();
   var sha1_code = new Hashes.SHA1().hex(code);
   var name = sha1_code + ".log";
-  console.log(name);
 
   var rfr = new XMLHttpRequest();
-  rfr.open('GET', "log/" + name , false);
+  // rfr.open('GET', "../log/" + name , false);
+
+  rfr.open('GET', "./log/4147efece79bceaad0433494c5f5e5a896681ef8.log" , false);
   rfr.send('');
 
   var txt = rfr.responseText;
+  // console.log(txt);
+  var i,j;
   var lst = txt.split("\n");
-  var word=[],time=[];
+  var word={},time={};
   var atk=0, dead=0, kill=0, end_time=0, start_time=0, tot_time;
   var r_kill, r_survive, r_fight, r_push, r_cpm;
-  for(sen in lst){
-    word = sen.split(" ");
-    for(sw in word){
-      if(sw == "ATK"){
+  // console.log(lst);
+
+  for (i=0;i<lst.length;i++){
+    var sen = lst[i];
+    // console.log(sen);
+    word = sen.split(":");
+    for(j=0;j<word.length;j++){
+      var sw = word[j];
+      // console.log(sw);
+      if(sw == "atk"){
         atk += 1;
       }
-      else if(sw == "DIED"){
+      else if(sw == "dead"){
         dead += 1;
       }
-      else if(sw == "USE_SKILL"){
+      else if(sw == "use_skill"){
         atk += 1;
       }
-      else if(sw == "KILL"){
+      else if(sw == "kill"){
         kill += 1;
       }
-      else if(sw == "team1 win" || sw == "team2 win"){
-        time = word[0].split(":");
+      else if(sw == " team1 win" || sw == " team2 win"){
         var hrs = parseInt(word[0]);
         var mins = parseInt(word[1]);
         var sec = parseInt(word[2]);
         end_time = ( hrs * 3600 ) + ( mins * 60) + sec;
       }
-      else if(sw == "game start"){
-        time = word[0].split(":");
+      else if(sw == " begin"){
         var hrs = parseInt(word[0]);
         var mins = parseInt(word[1]);
         var sec = parseInt(word[2]);
@@ -135,15 +142,20 @@ function rate(){
       }
     }
   }
-  tot_time = end_time - start_time;
+  if(end_time > start_time){
+    tot_time = end_time - start_time;
+  }
+  else{
+    tot_time = (86400 - start_time) + end_time;
+  }
   r_kill = rate_kill(kill, tot_time);
   r_survive = rate_survive(dead, tot_time);
   r_fight = rate_fight(atk, tot_time);
   r_push = rate_push(tot_time);
   r_cpm = rate_performance(kill, dead);
-
   // console.log(log);
-
+  rate_result = "-----Code Rating-----\nKill: " + r_kill + "\nSurvive: " + r_survive + "\nFight: " + r_fight + "\nPush: " + r_push + "\nPerformance: " + r_cpm;
+  alert(rate_result);
 }
 
 //function for calculate point of kill
@@ -158,11 +170,11 @@ function rate_kill(kill,time){
 
 //function for calculate point of survive
 function rate_survive(dead,time){
-  if((time/dead) <= (360)){ //assume Perfect code dead must dead lower than or equal 6 in 1 hours
+  if((time/dead) <= (1/600)){ //assume Perfect code must dead lower than or equal 6 in 1 hours
     return 10.00;
   }
   else{
-    return ((time/dead)/36);
+    return ((time/dead)/(600))*10;
   }
 }
 
@@ -195,6 +207,7 @@ function rate_performance(kill,dead){
     return "BAD";
   }
 }
+
 // read xml file for loading to category
 
 var xhrObj = new XMLHttpRequest();
