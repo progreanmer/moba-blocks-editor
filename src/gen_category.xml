@@ -63,5 +63,18 @@
         <block type="get_rev_message"></block>
         <block type="get_connection"></block>
         <block type="get_gold"></block>
+        <block type="count_near_enemy"></block>
+        <block type="get_alive"></block>
+        <block type="get_armor"></block>
+        <block type="get_current_exp"></block>
+        <block type="get_damage"></block>
+        <block type="get_death"></block>
+        <block type="get_kill"></block>
+        <block type="get_level"></block>
+        <block type="get_max_exp"></block>
+        <block type="get_name"></block>
+        <block type="get_skill_cooldown"></block>
+        <block type="get_skill_point"></block>
+        <block type="get_team_list"></block>
     </category>
 </category>

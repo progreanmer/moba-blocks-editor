@@ -1,3 +1,4 @@
+
 function gencode(){
   Blockly.Python.INDENT = "    ";
   var raw_code = Blockly.Python.workspaceToCode(workspace);
@@ -69,6 +70,11 @@ function saveBlock() {
 }
 
 function openBlock(raw_file) {
+  file_tmp = raw_file.split(" ");
+  if(file_tmp[0] != "<xml"){
+    alert("----- Alert!! -----\nWrong input file\nInput file must be XML format.");
+  }
+
   var xml = Blockly.Xml.textToDom(raw_file);
   Blockly.Xml.domToWorkspace(xml, workspace);
 }
@@ -97,7 +103,7 @@ function rate(){
   var rfr = new XMLHttpRequest();
   // rfr.open('GET', "../log/" + name , false);
 
-  rfr.open('GET', "./log/4147efece79bceaad0433494c5f5e5a896681ef8.log" , false);
+  rfr.open('GET', "../log/4147efece79bceaad0433494c5f5e5a896681ef8.log" , false);
   rfr.send('');
 
   var txt = rfr.responseText;

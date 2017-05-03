@@ -142,7 +142,72 @@ Blockly.Python["get_gold"] = function(block) {
   var code = "self.controller.get_gold()";
  return [code, Blockly.Python.ORDER_NONE];
 }
+//phase2 function
 
+Blockly.Python["count_near_enemy"] = function(block) {
+  var code = "self.controller.count_near_enemy()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_alive"] = function(block) {
+  var code = "self.controller.get_alive";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_armor"] = function(block) {
+  var code = "self.controller.get_armor()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_current_exp"] = function(block) {
+  var code = "self.controller.get_current_exp()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_damage"] = function(block) {
+  var code = "self.controller.get_damage()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_death"] = function(block) {
+  var code = "self.controller.get_death()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_kill"] = function(block) {
+  var code = "self.controller.get_kill()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_level"] = function(block) {
+  var code = "self.controller.get_level()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_max_exp"] = function(block) {
+  var code = "self.controller.get_max_exp()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_name"] = function(block) {
+  var code = "self.controller.get_name()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_skill_cooldown"] = function(block) {
+  var code = "self.controller.get_skill_cooldown()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_skill_point"] = function(block) {
+  var code = "self.controller.get_skill_point()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Python["get_team_list"] = function(block) {
+  var code = "self.controller.get_team_list()";
+ return [code, Blockly.Python.ORDER_NONE];
+}
 //addon translate
 Blockly.Python["variable_init"] = function(block) {
 

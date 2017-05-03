@@ -394,6 +394,227 @@ var thisBlock = this;
   }
 };
 
+//phase2 addition function
+var count_near_enemy = {
+  "message0" : "count_near_enemy.",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["count_near_enemy"] = {
+  init: function() {
+this.jsonInit(count_near_enemy);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of near enemy."
+    });
+  }
+};
+
+var get_alive = {
+  "message0" : "get_alive.",
+  "type": "output",
+  "colour": 250,
+  "output": "Boolean"
+};
+
+Blockly.Blocks["get_alive"] = {
+  init: function() {
+this.jsonInit(get_alive);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return true if hero is alive."
+    });
+  }
+};
+
+var get_armor = {
+  "message0" : "get_armor.",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_armor"] = {
+  init: function() {
+this.jsonInit(get_armor);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of armors."
+    });
+  }
+};
+
+var get_current_exp = {
+  "message0" : "get_current_exp .",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_current_exp"] = {
+  init: function() {
+this.jsonInit(get_current_exp);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of experience of hero."
+    });
+  }
+};
+
+var get_damage = {
+  "message0" : "get_damage .",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_damage"] = {
+  init: function() {
+this.jsonInit(get_damage);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of damage that hero was take."
+    });
+  }
+};
+
+var get_death = {
+  "message0" : "get_death .",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_death"] = {
+  init: function() {
+this.jsonInit(get_death);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of hero's death."
+    });
+  }
+};
+
+var get_kill = {
+  "message0" : "get_kill .",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_kill"] = {
+  init: function() {
+this.jsonInit(get_death);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of hero's kills."
+    });
+  }
+};
+
+var get_level = {
+  "message0" : "get_level .",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_level"] = {
+  init: function() {
+this.jsonInit(get_level);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of hero's levels."
+    });
+  }
+};
+
+var get_max_exp = {
+  "message0" : "get_max_exp .",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_max_exp"] = {
+  init: function() {
+this.jsonInit(get_max_exp);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of hero's maximun experiences."
+    });
+  }
+};
+
+var get_name = {
+  "message0" : "get_name .",
+  "type": "output",
+  "colour": 250,
+  "output": "String"
+};
+
+Blockly.Blocks["get_name"] = {
+  init: function() {
+this.jsonInit(get_name);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return a name of hero."
+    });
+  }
+};
+
+var get_skill_cooldown = {
+  "message0" : "get_skill_cooldown .",
+  "type": "output",
+  "colour": 250,
+  "output": ["Number","Array"]
+};
+
+Blockly.Blocks["get_skill_cooldown"] = {
+  init: function() {
+this.jsonInit(get_skill_cooldown);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of skill's cooldown list."
+    });
+  }
+};
+
+var get_skill_point = {
+  "message0" : "get_skill_point .",
+  "type": "output",
+  "colour": 250,
+  "output": "Number"
+};
+
+Blockly.Blocks["get_skill_point"] = {
+  init: function() {
+this.jsonInit(get_skill_point);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return number of upgrading skill's point."
+    });
+  }
+};
+
+var get_team_list  = {
+  "message0" : "get_team_list .",
+  "type": "output",
+  "colour": 250,
+  "output": ["String","Array"]
+};
+
+Blockly.Blocks["get_team_list"] = {
+  init: function() {
+this.jsonInit(get_team_list);
+var thisBlock = this;
+    this.setTooltip(function() {
+  return "This method will return list of nearby team ."
+    });
+  }
+};
 //addon Blocks
 
 var variable_init ={

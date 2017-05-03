@@ -109,7 +109,7 @@ app.on('ready', function(){
       submenu: [
         {
           label: 'Simulator',
-          click () { require('child_process').spawn('./src/Project_Simulator_test_game-master/botsim/') }
+          click () { require('child_process').exec('../Project_Simulator_test_game-master/botsim/') }
         }
       ]
     }

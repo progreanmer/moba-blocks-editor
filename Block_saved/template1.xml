@@ -1,0 +1,34 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="func" id="1poAAR1%Xla,h,nQV:rP" x="-533" y="-545">
+    <field name="func_name">move</field>
+    <statement name="internal_func">
+      <block type="move" id="jiS!doYgm^+zvSWwF~0B">
+        <value name="pos_x">
+          <block type="math_number" id="2[f.g33yhdE!@mU-XW#8">
+            <field name="NUM">500</field>
+          </block>
+        </value>
+        <value name="pos_y">
+          <block type="math_number" id="+5@s=V.H+|i#s/~gH_?M">
+            <field name="NUM">500</field>
+          </block>
+        </value>
+        <value name="msg">
+          <block type="text" id="!?P9hn)_{/8oVsqS_t/o">
+            <field name="TEXT">start</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <next>
+      <block type="func" id="=]SEFKVg_V^5O*xT+X~X">
+        <field name="func_name">run</field>
+        <statement name="internal_func">
+          <block type="func_call" id="]KHfxxUGx]rKR^7?U1^Y">
+            <field name="fn_name">move</field>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
